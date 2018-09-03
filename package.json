@@ -1,5 +1,7 @@
 {
   "name": "DSBlog",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "chromedriver": "^2.41.0"
+  }
 }
