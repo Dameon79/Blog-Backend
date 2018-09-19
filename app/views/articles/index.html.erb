@@ -1,11 +1,24 @@
-<h1>All Articles</h1>
+<%= render 'header' %> 
+<div class="c-aboutme">
+  <h2>About Me</h2>
+  <div class="c-aboutme__skills-container">
+    <%= image_tag "HTML5.png", class: "c-aboutme__skills-image" %>
+    <%= image_tag "CSS3.png", class: "c-aboutme__skills-image" %> 
+    <%= image_tag "ES6.svg", class: "c-aboutme__skills-image" %>
+    <%= image_tag "React.png", class: "c-aboutme__skills-image" %>
+    <%= image_tag "ruby.png", class: "c-aboutme__skills-image c-skills--ruby" %>
+    <%= image_tag "Rails1.png", class: "c-aboutme__skills-image" %>
+    <%= image_tag "nodejs2.png", class: "c-aboutme__skills-image c-skills--node" %>
+  </div>
+</div>
 
-<ul>
-  <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title, article_path(article) %>
-    </li>
+<h2>Blog Articles</h2>
+<div class="c-article-container">  
+  <% @article.each_with_index do |article, index| %>
+    <article class="c-article-container__article">
+      <h3 class="c-article-container__article-title"> <%=article.title %></h3>
+      <%= link_to "", article_path(article), class: "c-article-container__article-link" %>
+    </article>
   <% end %>
-</ul>
+</div>
 
-<%= link_to "Return to Homepage", welcome_index_url %>

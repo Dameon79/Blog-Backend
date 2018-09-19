@@ -10,7 +10,10 @@
   </head>
 
   <body>
-  <p class="flash"><%= flash.notice %></p>
+    <%= render 'nav' %>
+    <p class="flash"><%= flash.notice %></p>
+    
     <%= yield %>
+    <%= render 'footer' %>
   </body>
 </html>

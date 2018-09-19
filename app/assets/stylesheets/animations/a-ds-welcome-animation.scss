@@ -1,0 +1,35 @@
+.a-ds-welcome-animation {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 15px 2px;
+  color: rgb(255, 255, 255);
+  align-self: center;
+  margin: 0 auto;
+  width: 250px;
+  top: 35%;
+  justify-content: center;
+  padding-bottom: 10px;
+  
+  &__cell {
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px rgba(110, 110, 110, 0.5);
+    background-color: rgba(110, 110, 110, 0.1);
+    line-height: 1;
+    width: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .a-ds-welcome-animation  {
+    top: 25%;
+    max-width: 100%;
+    justify-content: center;
+  
+    &__cell {
+      font-size: 3rem;
+      width: 50px;
+    }
+  }
+}

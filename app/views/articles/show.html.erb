@@ -1,11 +1,17 @@
-<p>
-  <strong>Title:</strong>
+<header class="c-article-body__image"></header>
+<h1 class="c-article-body__heading">
   <%= @article.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
+</h1>
 
-<%= link_to "Back to Articles", articles_path %>
+<div class="c-articledata">
+  <div class="c-articledata__avatar"></div>
+  <h4 class="c-articledata__author">Dameon Sumpton</h4>
+  <h5 class="c-articledata__date">Published <%= @article.updated_at.strftime("%B %d %Y") %></h5>
+</div>
+
+<article class="c-article-body">
+  <%= @article.text %>
+</article>
+
+
+
