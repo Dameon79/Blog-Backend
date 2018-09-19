@@ -1,0 +1,2 @@
+web: rails s -p 3000
+db: postgres -D /usr/local/var/postgres

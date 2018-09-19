@@ -1,0 +1,35 @@
+.c-articledata {
+  position: relative;
+  height: 60px;
+  max-width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid grey;
+
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    background-image: url(logo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &__author {
+    position: absolute;
+    width: 80%;
+    max-height: 50%;
+    margin: 0 auto;
+    top: 10px;
+    left: 60px;
+  }
+
+  &__date {
+    position: absolute;
+    font-family: "Quicksand";
+    font-size: 0.8em;
+    max-width: 80%;
+    max-height: 50%;
+    top: 40px;
+    left: 60px;
+  }
+}

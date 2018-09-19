@@ -1,0 +1,12 @@
+.c-socialmedialogos  {
+  max-height: 45px;
+  filter: grayscale(100%);
+
+    &__git {
+      filter:invert(50%);
+    }
+
+    &:hover {
+      filter:none; 
+    }
+  }

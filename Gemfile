@@ -10,7 +10,8 @@ ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -34,6 +35,13 @@ gem 'bootstrap', '~> 4.1.3'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'foreman', '~> 0.85.0'
+gem 'thor', '~> 0.19.1'
+gem 'faker', '~> 1.8', '>= 1.8.7'
+gem 'selenium-webdriver', '~> 3.14'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -43,10 +51,8 @@ group :development, :test do
 end
 
 group :test do
-  gem 'faker', '~> 1.8', '>= 1.8.7'
   gem 'capybara', '~> 3.6'
   gem 'capybara-screenshot', '~> 1.0', '>= 1.0.13'
-  gem 'selenium-webdriver', '~> 3.14'
   gem 'database_cleaner', '~> 1.7'
 end
 

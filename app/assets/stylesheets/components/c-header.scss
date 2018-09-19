@@ -1,0 +1,23 @@
+.c-header {
+  height: 250px;
+  min-width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('head.jpg');
+  background-position: center;
+  top: 0;
+  text-align: center;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .c-header {
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .c-header {
+    height: 500px;
+  }
+}
