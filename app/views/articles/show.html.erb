@@ -1,17 +1,18 @@
-<header class="c-article-body__image"></header>
-<h1 class="c-article-body__heading">
+<header class="c-article__image"></header>
+<h1 class="c-article__heading">
   <%= @article.title %>
 </h1>
-
-<div class="c-articledata">
-  <div class="c-articledata__avatar"></div>
-  <h4 class="c-articledata__author">Dameon Sumpton</h4>
-  <h5 class="c-articledata__date">Published <%= @article.updated_at.strftime("%B %d %Y") %></h5>
+<div class="c-article__container">
+  <div class="c-articledata">
+    <div class="c-articledata__avatar"></div>
+    <h4 class="c-articledata__author">Dameon Sumpton</h4>
+    <h5 class="c-articledata__date">Published <%= @article.updated_at.strftime("%B %d %Y") %></h5>
+  </div>
+  <article class="c-article__body">
+    <%= @article.text %>
+  </article>
+  <%= render 'disqus' %>
 </div>
-
-<article class="c-article-body">
-  <%= @article.text %>
-</article>
 
 
 

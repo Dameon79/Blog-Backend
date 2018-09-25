@@ -12,7 +12,6 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
-        <td><%= article.text %></td>
         <td><%= link_to 'View', admin_article_path(article), 
                 class: "btn btn-outline-success"  %></td>
         <td><%= link_to 'Edit', edit_admin_article_path(article), 

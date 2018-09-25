@@ -1,4 +1,4 @@
-.c-article-container {
+.c-articles-container {
   min-height: 100vh;
   display: grid;
   grid-gap: 10px;
@@ -36,7 +36,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .c-article-container {
+  .c-articles-container {
     &__article {
       height: 340px;
       background-size: 80%;
@@ -45,7 +45,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .c-article-container {
+  .c-articles-container {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     padding-bottom: 20px;
