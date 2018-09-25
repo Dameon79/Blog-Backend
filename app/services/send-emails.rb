@@ -1,9 +1,5 @@
 class SendEmailCampaign 
-  def 
+  def call
     
   end
-
-
-
-
 end
