@@ -6,9 +6,9 @@
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
 var disqus_config = function () {
-  this.shortname = "application_name";
-  this.page.url = "<%= url_for(host: ENV['APPLICATION_HOST']) %>";
-  this.page.identifier = '<%= @article.id %>';
+  this.shortname = "dsblog";
+  this.page.url = "<%= article_url(@article) %>";
+  this.page.identifier = 'article-<%= @article.id %>';
   this.page.title = '<%= @article.title %>';
 };
 

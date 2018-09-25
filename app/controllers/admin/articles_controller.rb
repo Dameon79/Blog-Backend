@@ -1,5 +1,4 @@
 class Admin::ArticlesController < Admin::ApplicationController
-
   before_action :find_article, only: [:show, :edit, :update, :destroy]
 
   def index
