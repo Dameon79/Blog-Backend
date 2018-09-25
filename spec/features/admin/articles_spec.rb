@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe "Articles", type: :feature do
+  include BasicAuthHelper
+
+  before(:each) do
+    log_in
+  end
+
   describe "Viewing all articles" do
     let!(:article) { create(:article) }
 
@@ -42,7 +48,7 @@ RSpec.describe "Articles", type: :feature do
       visit admin_articles_path
 
       click_link "Edit"
-      fill_in "article_text", with: "new title"
+      fill_in "article_title", with: "new title"
       click_button "Update Article"
 
       expect(page).to have_content  "new title"
