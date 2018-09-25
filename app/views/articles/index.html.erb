@@ -1,4 +1,14 @@
 <%= render 'header' %> 
+
+<div class="c-my-codepens">
+  <h2>My Codepens</h2>
+  <div class="c-my-codepens__grid">
+    <p data-height="265" data-theme-id="dark" data-slug-hash="KQyVQe" data-default-tab="css,result" data-user="dameon79" data-pen-title="Android Logo" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/dameon79/pen/KQyVQe/">Android Logo</a> by Dameon Sumpton (<a href="https://codepen.io/dameon79">@dameon79</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  </div>
+</div>
+
+
 <div class="c-aboutme">
   <h2>About Me</h2>
   <div class="c-aboutme__skills-container">
@@ -12,13 +22,13 @@
   </div>
 </div>
 
+ 
 <h2>Blog Articles</h2>
-<div class="c-article-container">  
+<div class="c-articles-container">  
   <% @article.each_with_index do |article, index| %>
-    <article class="c-article-container__article">
-      <h3 class="c-article-container__article-title"> <%=article.title %></h3>
-      <%= link_to "", article_path(article), class: "c-article-container__article-link" %>
+    <article class="c-articles-container__article">
+      <h3 class="c-articles-container__article-title"> <%=article.title %></h3>
+      <%= link_to "", article_path(article), class: "c-articles-container__article-link" %>
     </article>
   <% end %>
 </div>
-

@@ -1,10 +1,16 @@
-.c-article-body {
-  min-height: 100%;
-  max-width: 80%;
-  margin: 0 auto;
-  padding: 10px 0 20px 0;
-  font-family: "Quicksand";
+.c-article {
+  &__container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px 0 20px 0;
+    font-family: "Quicksand";
+  }
 
+  &__body {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+  }
+ 
   &__image {
     height: 30%;
     width: 100%;
@@ -26,10 +32,13 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .c-article-body {
-    
+  .c-article {
     &__image {
-    height: 50%;
+      height: 50%;
+    }
+
+    &__body {
+      margin-bottom: 4rem;
     }
   }
 }

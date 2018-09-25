@@ -40,7 +40,8 @@ gem 'thor', '~> 0.19.1'
 gem 'faker', '~> 1.8', '>= 1.8.7'
 gem 'selenium-webdriver', '~> 3.14'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
-
+gem 'gibbon', '~> 3.2'
+gem 'webmock', '~> 3.4', '>= 3.4.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,6 +49,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails', '~> 4.10'
+  gem 'dotenv', '~> 2.5'
 end
 
 group :test do
