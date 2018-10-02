@@ -41,6 +41,9 @@ gem 'faker', '~> 1.8', '>= 1.8.7'
 gem 'selenium-webdriver', '~> 3.14'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'gibbon', '~> 3.2'
+gem 'friendly_id', '~> 5.2', '>= 5.2.4'
+gem 'sidekiq'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -52,7 +55,7 @@ group :development, :test do
 end
 
 group :test do
-  # gem 'webmock', '~> 3.4', '>= 3.4.2'
+  gem 'webmock', '~> 3.4', '>= 3.4.2'
   gem 'capybara', '~> 3.6'
   gem 'capybara-screenshot', '~> 1.0', '>= 1.0.13'
   gem 'database_cleaner', '~> 1.7'
