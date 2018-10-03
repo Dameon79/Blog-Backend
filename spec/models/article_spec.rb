@@ -9,7 +9,7 @@ RSpec.describe "have_received", type: :model do
     it "should call the SendEmailCampaign class" do
       # Check that the class was called
       create(:article)
-      expect(SendEmailCampaign).to have_received (:call)
+      expect(SendEmailCampaignJob).to have_received (:perform_async)
     end
   end
 end

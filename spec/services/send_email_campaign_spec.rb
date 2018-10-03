@@ -21,7 +21,7 @@ RSpec.describe SendEmailCampaign do
 
     it "should make a request to Mailchimp" do
       # Make call to service class
-      response = SendEmailCampaignJob.perform_async
+      response = SendEmailCampaign.call
       # Check response status
       expect(response.body.fetch(:status)).to eq "sent"
     end
