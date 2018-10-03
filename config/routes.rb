@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   end
 
   resources :articles
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
+  
 end
