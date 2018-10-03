@@ -1,7 +1,7 @@
 class SendEmailCampaignJob
   include Sidekiq::Worker
 
-  def perform(*args)
-    # Do something
+  def perform()
+     SendEmailCampaign.call
   end
 end
