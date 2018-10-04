@@ -20,7 +20,6 @@ class Admin::ArticlesController < Admin::ApplicationController
      if @article.save
       redirect_to admin_articles_path
       flash.notice = "Article succesfully created"
-
     else
      render 'new'
     end
@@ -47,7 +46,7 @@ class Admin::ArticlesController < Admin::ApplicationController
     end
 
     def find_article
-      @article = Article.find(params[:id])
+      @article = Article.friendly.find(params[:id])
     end
 end
 

@@ -1,0 +1,118 @@
+{
+	"id": "37f40cc1dd",
+	"web_id": 56299,
+	"type": "regular",
+	"create_time": "2018-09-28T10:05:01+00:00",
+	"archive_url": "http://eepurl.com/dIA4Oz",
+	"long_archive_url": "https://us19.campaign-archive.com/?u=3afc697b401bde3fce74181c1&id=37f40cc1dd",
+	"status": "save",
+	"emails_sent": 0,
+	"send_time": "",
+	"content_type": "template",
+	"needs_block_refresh": true,
+	"resendable": false,
+	"recipients": {
+		"list_id": "c21e2cc493",
+		"list_is_active": true,
+		"list_name": "DS Web Developer Blog",
+		"segment_text": "",
+		"recipient_count": 2
+	},
+	"settings": {
+		"subject_line": "Test Campaign",
+		"title": "",
+		"from_name": "DS Blog",
+		"reply_to": "dsumpton@hotmail.co.uk",
+		"use_conversation": false,
+		"to_name": "",
+		"folder_id": "",
+		"authenticate": true,
+		"auto_footer": false,
+		"inline_css": false,
+		"auto_tweet": false,
+		"fb_comments": true,
+		"timewarp": false,
+		"template_id": 14067,
+		"drag_and_drop": true
+	},
+	"tracking": {
+		"opens": true,
+		"html_clicks": true,
+		"text_clicks": false,
+		"goal_tracking": false,
+		"ecomm360": false,
+		"google_analytics": "",
+		"clicktale": "N"
+	},
+	"delivery_status": {
+		"enabled": false
+	},
+	"_links": [
+		{
+			"rel": "parent",
+			"href": "https://us19.api.mailchimp.com/3.0/campaigns",
+			"method": "GET",
+			"targetSchema": "https://us19.api.mailchimp.com/schema/3.0/Definitions/Campaigns/CollectionResponse.json",
+			"schema": "https://us19.api.mailchimp.com/schema/3.0/CollectionLinks/Campaigns.json"
+		},
+		{
+			"rel": "self",
+			"href": "https://us19.api.mailchimp.com/3.0/campaigns/37f40cc1dd",
+			"method": "GET",
+			"targetSchema": "https://us19.api.mailchimp.com/schema/3.0/Definitions/Campaigns/Response.json"
+		},
+		{
+			"rel": "delete",
+			"href": "https://us19.api.mailchimp.com/3.0/campaigns/37f40cc1dd",
+			"method": "DELETE"
+		},
+		{
+			"rel": "send",
+			"href": "https://us19.api.mailchimp.com/3.0/campaigns/37f40cc1dd/actions/send",
+			"method": "POST"
+		},
+		{
+			"rel": "cancel_send",
+			"href": "https://us19.api.mailchimp.com/3.0/campaigns/37f40cc1dd/actions/cancel-send",
+			"method": "POST"
+		},
+		{
+			"rel": "feedback",
+			"href": "https://us19.api.mailchimp.com/3.0/campaigns/37f40cc1dd/feedback",
+			"method": "GET",
+			"targetSchema": "https://us19.api.mailchimp.com/schema/3.0/Definitions/Campaigns/Feedback/CollectionResponse.json"
+		},
+		{
+			"rel": "content",
+			"href": "https://us19.api.mailchimp.com/3.0/campaigns/37f40cc1dd/content",
+			"method": "GET",
+			"targetSchema": "https://us19.api.mailchimp.com/schema/3.0/Definitions/Campaigns/Content/Response.json"
+		},
+		{
+			"rel": "send_checklist",
+			"href": "https://us19.api.mailchimp.com/3.0/campaigns/37f40cc1dd/send-checklist",
+			"method": "GET",
+			"targetSchema": "https://us19.api.mailchimp.com/schema/3.0/Definitions/Campaigns/Checklist/Response.json"
+		},
+		{
+			"rel": "pause",
+			"href": "https://us19.api.mailchimp.com/3.0/campaigns/37f40cc1dd/actions/pause",
+			"method": "POST"
+		},
+		{
+			"rel": "resume",
+			"href": "https://us19.api.mailchimp.com/3.0/campaigns/37f40cc1dd/actions/resume",
+			"method": "POST"
+		},
+		{
+			"rel": "replicate",
+			"href": "https://us19.api.mailchimp.com/3.0/campaigns/37f40cc1dd/actions/replicate",
+			"method": "POST"
+		},
+		{
+			"rel": "create_resend",
+			"href": "https://us19.api.mailchimp.com/3.0/campaigns/37f40cc1dd/actions/create-resend",
+			"method": "POST"
+		}
+	]
+}
