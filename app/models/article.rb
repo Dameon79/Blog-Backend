@@ -8,7 +8,7 @@ class Article < ApplicationRecord
   private
 
   def send_campaign
-    SendEmailCampaign.call
+    SendEmailCampaignJob.perform_async
   end
 end
 
