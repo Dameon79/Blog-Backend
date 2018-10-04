@@ -1,12 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe SendEmailCampaignJob, type: :worker do
-  describe "sending an email" do
+  describe "sending an email", sidekiq: :inline do
+    before do
+      allow(SendEmailCampaign).to receive(:call)
+    end
+
     it "should queue a worker" do
-      create(:article)
-      expect {
+        Sidekiq::Testing.inline! do
         SendEmailCampaignJob.perform_async
-      }.to change(SendEmailCampaignJob.jobs, :size).by(1)
+        expect(SendEmailCampaign).to have_received (:call)
+       end
     end
   end
 end

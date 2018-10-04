@@ -9,3 +9,11 @@ RSpec.configure do |config|
     Sidekiq::Worker.clear_all
   end
 end
+
+ RSpec.configure do |config|
+   config.around(:each, :inline) do
+       Sidekiq::Testing.inline!
+     else
+       Sidekiq::Testing.fake!
+    end
+  end
