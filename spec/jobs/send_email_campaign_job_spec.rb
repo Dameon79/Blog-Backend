@@ -8,7 +8,7 @@ RSpec.describe SendEmailCampaignJob, type: :worker do
 
     it "should queue a worker" do
       SendEmailCampaignJob.perform_async
-        expect(SendEmailCampaign).to have_received (:call)
+      expect(SendEmailCampaign).to have_received (:call)
     end
   end
 end

@@ -3,7 +3,7 @@
   <%= @article.title %>
   <p>
     <strong>Text:</strong>
-    <%= @article.text %>
+    <%= markdown(@article.text) %>
   </p>
   <br>
   <%= link_to "Back to Articles", admin_articles_path, class: "btn btn-secondary" %>

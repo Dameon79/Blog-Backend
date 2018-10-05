@@ -9,7 +9,7 @@
     <h5 class="c-articledata__date">Published <%= @article.updated_at.strftime("%B %d %Y") %></h5>
   </div>
   <article class="c-article__body">
-    <%= @article.text %>
+    <%= markdown(@article.text) %>
   </article>
   <%= render 'disqus' %>
 </div>
