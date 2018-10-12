@@ -1,6 +1,5 @@
 .f-comments-form {
   
-  
   &__submit input {
     position: relative;
     border: none;
@@ -31,10 +30,9 @@
     border-radius: 5px;
     padding-top: 10px;
     list-style-type: disc;
+    padding-left: 1rem;
         
     &::placeholder {
-      padding-top: 10px;
-      padding-left: 5px;
       color: rgba(60, 35, 129, 0.8);
       text-shadow: 1px 1px 1px rgba(109, 109, 109, 0.2);
     }
@@ -48,7 +46,6 @@
     border-radius: 5px;
 
     &::placeholder {
-      padding-left: 5px;
       color: rgba(60, 35, 129, 0.8);
       text-shadow: 1px 1px 1px rgba(109, 109, 109, 0.2);
     }
