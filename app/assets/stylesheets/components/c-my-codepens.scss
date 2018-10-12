@@ -1,22 +1,36 @@
 .c-my-codepens {
-  margin-bottom: 10px;
-  margin: 0 auto;
+  padding: 10px;
 }
 
 @media only screen and (min-width: 768px) {
+  .c-my-codepens {
+    margin-right: 15px;
+
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: 10px 10px;
+    }
+  }
+
   iframe {
-    height: 400px;
+    margin-left: 8px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-
   .c-my-codepens {
+
     &__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: auto;
-      grid-gap: 10px 5px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    iframe {
+      margin-left: 8px;
+      height: 350px;
     }
   }
 }

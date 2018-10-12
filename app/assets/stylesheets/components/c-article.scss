@@ -1,4 +1,13 @@
 .c-article {
+  &__image {
+    height: 250px;
+    width: 100%;
+    background-image: url(articlebg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   &__container {
     max-width: 80%;
     margin: 0 auto;
@@ -11,15 +20,6 @@
     margin-bottom: 3rem;
   }
  
-  &__image {
-    height: 30%;
-    width: 100%;
-    background-image: url(articlebg.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
   &__heading {
     font-size: 1.8rem;
     text-align: center;
@@ -33,8 +33,9 @@
 
 @media only screen and (min-width: 768px) {
   .c-article {
+    
     &__image {
-      height: 50%;
+      height: 450px;
     }
 
     &__body {
