@@ -1,0 +1,26 @@
+<%= form_for [@article, @comment] do |form| %>
+
+  <% if @comment.errors.any? %>
+    <div id="error_explanation">
+      <h2 class="alert alert-primary">
+        <%= pluralize(@comment.errors.count, "error") %> prohibited
+          this comment from being saved:
+      </h2>
+      <ul>
+        <% @comment.errors.full_messages.each do |msg| %>
+          <li class="alert alert-danger"><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="f-comments-form">
+    <% form.label :name %>
+    <%= form.text_field :name, class: "f-comments-form__name", placeholder: "Add name to comment" %>
+  </div>
+  <div class="f-comments-form">
+    <% form.label :body %>
+    <%= form.text_area :body, class: "f-comments-form__body", placeholder: "Add to the discussion.." %>
+  </div>
+  <p class="f-comments-form__submit"><%= form.submit "Post", class:"f-comments-form__submit" %></p>
+<% end %>

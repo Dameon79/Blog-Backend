@@ -1,6 +1,6 @@
+@import "reset";
 
 @import "fonts";
-@import "reset";
 @import "base";
 
 @import "components/c-header";
@@ -13,7 +13,10 @@
 @import "components/c-articles-container";
 @import "components/c-articledata";
 @import "components/c-footer";
+@import "components/c-comments-container";
 @import "components/c-socialmedialogos";
+
+@import "forms/f-comments-form"; 
 
 @import "utilities/u-white-border";
 

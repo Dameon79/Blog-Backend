@@ -7,9 +7,10 @@ Rails.application.routes.draw do
     resources :articles
   end
 
-  resources :articles
+  resources :articles do 
+    resources :comments
+  end
 
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'
-  
 end

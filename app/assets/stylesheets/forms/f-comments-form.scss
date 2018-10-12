@@ -1,0 +1,57 @@
+.f-comments-form {
+  
+  
+  &__submit input {
+    position: relative;
+    border: none;
+    height: 30px;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background: radial-gradient(#8051be, #693aa7, #30016d);
+    width: 100px;
+    float: right;
+    margin-left: 0px;
+    
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+      text-shadow: 2px 2px 2px black;
+    }
+  }
+
+  &__body {
+    display: flex;
+    width: 99.5%;
+    word-break: break-all;
+    height: 50px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.336);
+    border-radius: 5px;
+    padding-top: 10px;
+    list-style-type: disc;
+        
+    &::placeholder {
+      padding-top: 10px;
+      padding-left: 5px;
+      color: rgba(60, 35, 129, 0.8);
+      text-shadow: 1px 1px 1px rgba(109, 109, 109, 0.2);
+    }
+  }
+
+  &__name {
+    width: 99.6%;
+    height: 30px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(128, 128, 128, 0.336);
+    border-radius: 5px;
+
+    &::placeholder {
+      padding-left: 5px;
+      color: rgba(60, 35, 129, 0.8);
+      text-shadow: 1px 1px 1px rgba(109, 109, 109, 0.2);
+    }
+  }
+}
+
