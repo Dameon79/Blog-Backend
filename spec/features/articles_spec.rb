@@ -13,14 +13,6 @@ RSpec.describe "Articles", type: :feature do
 
       expect(page).to have_content article.title
     end
-
-    it "loads disqus", js: true do
-      visit article_path(article)
-    
-      within '#disqus_thread' do
-        expect(page).to have_xpath '//iframe'
-      end
-    end
   end
 
   describe "Displays the Homepage to a user" do

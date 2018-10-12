@@ -5,10 +5,12 @@ class ArticlesController < ApplicationController
   end
  
   def show
-    @article = Article.friendly.find(params[:id])
+    @article = Article.includes(:comments).friendly.find(params[:id])
+    @comment = Comment.new
   end
 
   private
+
     def article_params
       params.require(:article).permit(:title, :text)
     end

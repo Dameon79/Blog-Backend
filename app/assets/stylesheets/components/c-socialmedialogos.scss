@@ -1,5 +1,5 @@
 .c-socialmedialogos  {
-  max-height: 45px;
+  max-height: 32px;
   filter: grayscale(100%);
 
     &__git {
@@ -10,3 +10,9 @@
       filter:none; 
     }
   }
+
+  @media only screen and (min-width: 768px) {
+    .c-socialmedialogos {
+      max-height: 40px;
+    }
+  }  

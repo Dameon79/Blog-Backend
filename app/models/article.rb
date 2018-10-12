@@ -3,6 +3,7 @@ class Article < ApplicationRecord
   friendly_id :title, use: :slugged
   
   validates :title, :text, presence: true
+  has_many :comments
   after_create :send_campaign
   
   private

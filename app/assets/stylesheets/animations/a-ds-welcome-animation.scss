@@ -2,34 +2,95 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  grid-gap: 15px 2px;
+  grid-gap: 15px 3px;
   color: rgb(255, 255, 255);
   align-self: center;
   margin: 0 auto;
   width: 250px;
-  top: 30%;
+  top: 25%;
   justify-content: center;
   padding-bottom: 10px;
   
-  &__cell {
+  &__cell1, &__cell2, &__cell3 {
     font-weight: bold;
     font-size: 2rem;
     text-shadow: 1px 1px 1px rgba(110, 110, 110, 0.5);
-    background-color: rgba(110, 110, 110, 0.1);
+    box-shadow: 0 1px 20px rgba(0,0,0,0.19), 0 3px 1px rgba(0,0,0,0.19);
     line-height: 1;
+    border-radius: 2px;
     width: 30px;
   }
 }
 
 @media only screen and (min-width: 768px) {
+  .a-ds-welcome-animation {
+
+    &__cell1, &__cell2, &__cell3 {
+      position: relative;
+      font-size: 3rem;
+      width: 50px;
+      text-shadow: 5px 5px 5px rgba(110, 110, 110, 0.9);
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
   .a-ds-welcome-animation  {
     top: 25%;
     max-width: 100%;
-    justify-content: center;
+    grid-gap: 30px 5px;
   
-    &__cell {
-      font-size: 3rem;
-      width: 50px;
+    &__cell1, &__cell2, &__cell3 {
+      position: relative;
+      font-size: 5rem;
+      width: 80px;
+      text-shadow: 2px 2px 2px rgba(110, 110, 110, 0.9);
+    
+    }
+
+    &__cell1 {
+      animation: dsgridline1 2.5s;
+      animation-timing-function: ease;
+    }
+
+    &__cell2 {
+      animation: dsgridline2 2.5s;
+      animation-timing-function: ease;
+    }
+
+    &__cell3 {
+      animation: dsgridline3 2.5s;
+      animation-timing-function: ease-out;
+    }
+
+    @keyframes dsgridline1{
+      from {
+        left: -800px;
+        opacity: 0.0;
+      }
+      to {
+        left: 0px;
+      }
+    }
+
+    @keyframes dsgridline2 {
+      from {
+        right: -800px;
+        opacity: 0.0;
+      }
+      to {
+        right: 0px;
+      }
+    }
+
+    @keyframes dsgridline3{
+      from {
+        bottom: -200px;
+        opacity: 0;
+      }
+      to {
+        bottom: 0px;
+      }
     }
   }
 }
