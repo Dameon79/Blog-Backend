@@ -10,7 +10,7 @@ ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'pg', '~> 1.1', '>= 1.1.3'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -42,8 +42,10 @@ gem 'selenium-webdriver', '~> 3.14'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'gibbon', '~> 3.2'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
-gem 'sidekiq'
+gem 'sidekiq', '~> 5.2', '>= 5.2.2'
 gem 'redcarpet', '~> 3.4'
+gem 'dalli', '~> 2.7', '>= 2.7.8'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
