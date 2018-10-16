@@ -9,9 +9,9 @@
     border-radius: 5px;
     font-size: 1.2rem;
     background: radial-gradient(#8051be, #693aa7, #30016d);
-    width: 100px;
+    padding: 0;
+    width: 70px;
     float: right;
-    margin-left: 0px;
     
     &:hover {
       box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
@@ -21,7 +21,7 @@
 
   &__body {
     display: flex;
-    width: 99.5%;
+    width: 95%;
     word-break: break-all;
     height: 50px;
     font-size: 0.9rem;
@@ -31,15 +31,17 @@
     padding-top: 10px;
     list-style-type: disc;
     padding-left: 1rem;
+    font-family: 'Exo 2';
         
     &::placeholder {
       color: rgba(60, 35, 129, 0.8);
       text-shadow: 1px 1px 1px rgba(109, 109, 109, 0.2);
+      font-weight: bold;
     }
   }
 
   &__name {
-    width: 99.6%;
+    width: 95%;
     height: 30px;
     font-size: 0.9rem;
     border: 1px solid rgba(128, 128, 128, 0.336);
@@ -48,7 +50,20 @@
     &::placeholder {
       color: rgba(60, 35, 129, 0.8);
       text-shadow: 1px 1px 1px rgba(109, 109, 109, 0.2);
+      font-weight: bold;
     }
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .f-comments-form {
+
+    &__body {
+      width: 98.25%;
+    }
+
+    &__name {
+      width: 98.25%;
+    }
+  }
+}
