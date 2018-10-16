@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe SendEmailCampaign do
   describe "Sending a mailchimp campaign", type: :request do
     before do
-      request = File.read('spec/fixtures/mailchimp_request.json')
-      response = File.read('spec/fixtures/mailchimp_response.json')
-      status_response = File.read('spec/fixtures/mailchimp_status.json')
+      request = file_fixture('mailchimp_request.json').read
+      response = file_fixture('mailchimp_response.json').read
+      status_response = file_fixture('mailchimp_status.json').read
       # Mock out gibbon gem with fixture as the response
       stub_request(:post, "https://us19.api.mailchimp.com/3.0/campaigns").
         with(body: request).

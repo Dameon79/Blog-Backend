@@ -2,6 +2,7 @@
   "name": "DSBlog",
   "private": true,
   "dependencies": {
-    "chromedriver": "^2.41.0"
+    "chromedriver": "^2.41.0",
+    "memcached": "^2.2.2"
   }
 }
