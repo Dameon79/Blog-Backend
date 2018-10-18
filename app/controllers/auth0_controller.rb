@@ -6,7 +6,7 @@ class Auth0Controller < ApplicationController
     session[:userinfo] = request.env['omniauth.auth']
 
     # Redirect to the URL you want after successful auth
-    redirect_to 'http://localhost:3000'
+    redirect_to 'http://dameon-sumpton.com'
   end
   
   def failure
