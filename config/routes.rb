@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   get 'articles/index'
   root 'articles#index'
 
+  get 'auth/oauth2/callback' => 'auth0#callback'
+  get 'auth/failure' => 'auth0#failure'
+
   namespace :admin do
     root 'articles#index'
     resources :articles
