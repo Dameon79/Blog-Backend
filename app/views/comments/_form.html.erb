@@ -16,7 +16,7 @@
 
   <div class="f-comments-form">
     <h6 class="f-comments-form__avatar-text">Logged in as <%= user["info"]["name"] %>
-      <img class=f-comments-form__avatar src=" <%= user["info"]["image"] %>" /> 
+      <img class=f-comments-form__avatar src="<%= user["info"]["image"] %>" /> 
     </h6>
     <% form.label :name, class: "f-comments-form__label" %>
     <%= form.hidden_field :name, class: "f-comments-form__name", value: user["info"]["nickname"] %>
