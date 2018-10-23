@@ -8,7 +8,7 @@ end
 ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6'
+gem 'rails', '~> 5.2', '>= 5.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'pg', '~> 1.1', '>= 1.1.3'
 
@@ -44,10 +44,10 @@ gem 'gibbon', '~> 3.2'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 gem 'sidekiq', '~> 5.2', '>= 5.2.2'
 gem 'redcarpet', '~> 3.4'
-gem 'dalli', '~> 2.7', '>= 2.7.8'
 gem 'omniauth', '~> 1.6.1'
 gem 'omniauth-auth0', '~> 2.0.0'
 gem 'dalli', '~> 2.7', '>= 2.7.8'
+gem 'aws-sdk-s3', '~> 1.21', require: false
 
 
 group :development, :test do
@@ -64,7 +64,8 @@ group :test do
   gem 'capybara', '~> 3.6'
   gem 'capybara-screenshot', '~> 1.0', '>= 1.0.13'
   gem 'database_cleaner', '~> 1.7'
-  gem 'rspec-sidekiq'
+  gem 'rspec-sidekiq', '~> 3.0', '>= 3.0.3'
+  gem 'rack_session_access', '~> 0.2.0'
 end
 
 group :development do

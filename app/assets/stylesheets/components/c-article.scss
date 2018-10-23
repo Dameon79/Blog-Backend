@@ -1,21 +1,29 @@
 .c-article {
-  &__image {
-    height: 250px;
+
+  &__header {
+    height: 50px;
     width: 100%;
-    background-image: url(articlebg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: linear-gradient(to right, rgba(109, 9, 139, 0.37), rgb(169, 150, 201));
+  }
+
+  &__image {
+    height: 200px;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-bottom: 5px;
   }
 
   &__container {
+    position: relative;
     max-width: 80%;
     margin: 0 auto;
     padding: 10px 0 20px 0;
     font-family: "Quicksand";
+    min-height: 80vh;
   }
 
   &__body {
+    position: relative; 
     margin-top: 1.5rem;
     margin-bottom: 3rem;
   }
@@ -35,11 +43,16 @@
   .c-article {
     
     &__image {
-      height: 450px;
+      height: 400px;
+      float: left;
     }
 
     &__body {
       margin-bottom: 4rem;
+    }
+
+    &__header {
+      height: 75px;
     }
   }
 }

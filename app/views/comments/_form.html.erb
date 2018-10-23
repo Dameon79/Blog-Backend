@@ -15,14 +15,14 @@
   <% end %>
 
   <div class="f-comments-form">
-    <h6 class="f-comments-form__avatar-text">Logged in as <%= @user["info"]["name"] %>
-      <img class=f-comments-form__avatar src=" <%= @user["info"]["image"] %>" /> 
+    <h6 class="f-comments-form__avatar-text">Logged in as <%= user["info"]["name"] %>
+      <img class=f-comments-form__avatar src="<%= user["info"]["image"] %>" /> 
     </h6>
     <% form.label :name, class: "f-comments-form__label" %>
-    <%= form.hidden_field :name, class: "f-comments-form__name", value: @user["info"]["name"] %>
+    <%= form.hidden_field :name, class: "f-comments-form__name", value: user["info"]["nickname"] %>
     <%= form.label :body, class: "f-comments-form__label bodylabel" %>
     <%= form.text_area :body, class: "f-comments-form__body", placeholder: "Add to the discussion.." %>
-    <%= form.hidden_field :avatar, value: @user["info"]["image"] %>
+    <%= form.hidden_field :avatar, value: user["info"]["image"] %>
   </div>
   <p class="f-comments-form__submit"><%= form.submit "Post", class:"f-comments-form__submit" %></p>
 <% end %>

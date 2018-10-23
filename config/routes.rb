@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'articles/index'
   root 'articles#index'
 
   get 'auth/oauth2/callback' => 'auth0#callback'
