@@ -1,5 +1,4 @@
 <%= render 'header' %> 
-
 <div class="c-aboutme">
   <h2>About Me</h2>
   <div class="c-aboutme__skills-container">
@@ -22,10 +21,11 @@
 </div>
 
 <h2>Blog Articles</h2>
-<div class="c-articles-container">  
-  <% @article.each_with_index do |article, index| %>
-    <article class="c-articles-container__article">
-      <h3 class="c-articles-container__article-title"> <%= article.title %></h3>
+<div class="c-articles-container"> 
+  <% @article.each_with_index do |article, index| %> 
+    <article class="c-articles-container__article"> 
+      <h3 class="c-articles-container__article-title"><%= article.title %></h3>
+      <img class="c-articles-container__article-image" src="<%= rails_blob_path(article.image) %>">
       <%= link_to "", article_path(article), class: "c-articles-container__article-link" %>
     </article>
   <% end %>

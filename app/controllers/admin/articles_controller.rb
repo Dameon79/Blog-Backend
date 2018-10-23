@@ -17,6 +17,7 @@ class Admin::ArticlesController < Admin::ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.image.attach(article_params[:image])
      if @article.save
       redirect_to admin_articles_path
       flash.notice = "Article succesfully created"
@@ -42,7 +43,7 @@ class Admin::ArticlesController < Admin::ApplicationController
 
   private
     def article_params
-      params.require(:article).permit(:title, :text)
+      params.require(:article).permit(:title, :text, :image)
     end
 
     def find_article

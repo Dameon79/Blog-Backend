@@ -4,6 +4,7 @@ FactoryBot.define do
   factory :article do
     title { Faker::FamilyGuy.character }
     text  { Faker::FamilyGuy.quote }
+    image { fixture_file_upload(Rails.root.join('spec', 'fixtures', 'files', 'skills1.jpg'), 'image/jpg') }
 
     transient do
       comments { 1 }

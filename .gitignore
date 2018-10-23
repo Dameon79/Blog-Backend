@@ -25,3 +25,5 @@
 .env
 
 examples.txt
+
+/storage/*
