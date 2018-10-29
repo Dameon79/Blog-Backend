@@ -3,11 +3,11 @@
   &__header {
     height: 50px;
     width: 100%;
-    background-image: linear-gradient(to right, rgba(109, 9, 139, 0.37), rgb(169, 150, 201));
+    background-image: var(--linear-gradient);
   }
 
   &__image {
-    height: 200px;
+    width: 100%;
     margin: 0 auto;
     padding-right: 10px;
     padding-bottom: 5px;
@@ -39,11 +39,11 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $media-medium) {
   .c-article {
     
     &__image {
-      height: 400px;
+      width: 50%;
       float: left;
     }
 

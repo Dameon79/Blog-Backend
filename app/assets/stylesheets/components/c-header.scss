@@ -10,13 +10,13 @@
   text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $media-medium) {
   .c-header {
     height: 350px;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: $media-large) {
   .c-header {
     height: 90vh;
   }

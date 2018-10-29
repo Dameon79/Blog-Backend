@@ -1,18 +1,23 @@
+$media-medium: 720px;
+$media-large: 960px; 
+
 :root {
   --comment-form-text-shadow: 1px 1px 1px rgba(78, 32, 116, 0.5);
   --comment-form-text-color: rgb(60, 35, 129);
+
+  --linear-gradient: linear-gradient(to right, rgba(109, 9, 139, 0.37), rgb(169, 150, 201));
+  --button-gradient: radial-gradient(#8051be, #693aa7, #30016d);  
 }
 
 a {
   text-decoration: none;
   color: rgb(255, 255, 255);
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 a:hover {
-  color: rgb(190, 190, 190);
-  text-shadow: 1px 1px 1px rgb(68, 39, 77);
+  text-shadow: 1px 1px 1px rgb(217, 176, 255);
+  color: rgb(60, 35, 129);
 }
 
 body {
@@ -25,7 +30,7 @@ h2 {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  background-image: linear-gradient(to right, rgba(109, 9, 139, 0.37), rgb(169, 150, 201));
+  background-image: var(--linear-gradient);
   height: 50px;
   margin-bottom: 10px;
   width: 100%;
@@ -34,5 +39,10 @@ h2 {
 input {
   padding-left: 1rem;
   font-family: 'Exo 2';
-  text-shadow: 1px 1px 1px rgba(109, 109, 109, 0.2);
+  font-weight: 600;
+}
+
+textarea {
+  font-family: 'Exo 2';
+  font-weight: 600;
 }

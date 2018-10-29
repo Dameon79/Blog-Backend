@@ -6,9 +6,9 @@
 
   <nav class="c-burgernav">
     <%=link_to "Home", root_url, class: "c-burgernav__menu" %>
-    <a href="#" class="c-burgernav__menu">About Me</a>
+    <%=link_to "About Me", pages_about_url, class: "c-burgernav__menu" %>
     <a href="#" class="c-burgernav__menu">My Projects</a>
     <a href="#" class="c-burgernav__menu">Blog Articles</a>
-    <a href="#" class="c-burgernav__menu u-white-border">Contact</a>
+    <%=link_to "Contact", pages_contact_url, class: "c-burgernav__menu u-white-border" %>
   </nav>
 </div>

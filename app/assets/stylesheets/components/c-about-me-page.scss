@@ -1,0 +1,134 @@
+.c-about-me-page {
+  
+  &__header {
+    height: 50px;
+    width: 100%;
+    background-image: var(--linear-gradient);
+  }
+
+  &__content {
+    width: 95%;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__photo {
+    position: relative;
+    height: 75px;
+    width: 75px;
+    border: 1px solid grey;
+    margin-right: 10px;
+    margin-top: 7px;
+    border-radius: 10px;
+    float: left;
+    background-image: url(sampleme.jpg);
+    background-size: 100%;
+    filter: grayscale(80%);
+  }
+
+  &__welcome {
+    font-size: 1.4rem;
+    font-family: 'Anton';
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px grey;
+    padding-top: 5px;
+  }
+
+  &__name {
+    font-family: 'Anton';
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    padding-top: 4px;
+  }
+
+  &__welcome-text {
+    font-family: 'Anton';
+    font-size: 0.9rem;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    letter-spacing: 0.5px;
+  }
+
+  &__main-text {
+    padding: 10px;
+    font-family: 'Exo 2';
+  }
+
+  &__skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: rgb(219, 219, 219);
+  }
+  
+  &__skills-text {
+    width: 100%;
+    text-align: center;
+    font-family: 'Anton';
+    padding: 5px;
+  }
+
+  &__skills-image {
+    height: 60px;
+    padding: 5px;
+  }
+}
+
+.c-skills-ruby {
+  height: 45px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.c-skills-rails {
+  margin-top: 5px;
+}
+
+@media only screen and (min-width: $media-medium) {
+  .c-about-me-page {
+
+    &__header {
+      height: 75px;
+    }
+
+    &__photo {
+      width: 150px;
+      height: 150px;
+    }
+
+    &__welcome {
+      font-size: 2.5rem;
+    }
+
+    &__name {
+      font-size: 2rem;
+    }
+
+    &__welcome-text {
+      font-size: 1.8rem;
+    }
+
+    &__skills-text {
+      font-size: 1.6rem;
+    }
+    
+    &__skills-image {
+      height: 80px;
+    }
+  }
+
+  .c-skills-ruby {
+    height: 70px;
+
+  }
+}

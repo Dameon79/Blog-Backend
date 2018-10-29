@@ -6,18 +6,20 @@
 @import "components/c-header";
 @import "components/c-personal-logo";
 @import "components/c-burger-container";
+@import "components/c-burgernav";
 @import "components/c-mc-signup";
 @import "components/c-my-codepens";
-@import "components/c-aboutme";
 @import "components/c-article";
 @import "components/c-articles-container";
 @import "components/c-articledata";
 @import "components/c-footer";
 @import "components/c-comments-container";
 @import "components/c-socialmedialogos";
-
+@import "components/c-about-me-page";
+@import "components/c-contact-page";
 
 @import "forms/f-comments-form"; 
+@import "forms/f-contact-form";
 
 @import "utilities/u-white-border";
 

@@ -1,10 +1,10 @@
 <footer class="c-footer">
   <nav class="c-footer__nav">
     <%=link_to "Home", root_url, class: "c-footer__navitem" %>  
-    <a href="#" class="c-footer__navitem">About Me</a>
+    <%=link_to "About Me", pages_about_url, class: "c-footer__navitem" %>
     <a href="#" class="c-footer__navitem">My Projects</a>
     <a href="#" class="c-footer__navitem">Blog Articles</a>
-    <a href="#" class="c-footer__navitem u-white-border">Contact</a>
+    <%=link_to "Contact", pages_contact_url, class: "c-footer__navitem u-white-border" %>
   </nav>
 
   <nav class="c-footer__socialmedia">

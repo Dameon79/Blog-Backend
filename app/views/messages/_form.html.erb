@@ -1,0 +1,29 @@
+<%= form_for @message ||= Message.new do |form| %>
+
+  <% if @message.errors.any? %>
+    <div id="error_explanation">
+      <h2 class="alert alert-primary">
+        <%= pluralize(@message.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @message.errors.full_messages.each do |msg| %>
+          <li class="alert alert-danger"><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="f-contact-form">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "f-contact-form__input", placeholder: "Your Name" %>
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "f-contact-form__input", placeholder: "Your e-mail address" %>
+    <%= form.label :body %>
+    <%= form.text_area :body, rows: 10, class: "f-contact-form__input", placeholder: "Please type your message" %>
+  </div>
+  <p>
+    <%= form.submit "Send", class:"f-contact-form__submit" %>
+  </p>
+
+<% end %>

@@ -2,7 +2,7 @@
   padding: 10px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $media-medium) {
   .c-my-codepens {
     margin-right: 15px;
 
@@ -10,7 +10,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto;
-      grid-gap: 10px 10px;
+      grid-gap: 0px 50px;
     }
   }
 
@@ -21,16 +21,17 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: $media-large) {
   .c-my-codepens {
 
     &__grid {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
     iframe {
       margin-left: 8px;
-      height: 350px;
+      height: 450px;
+      
     }
   }
 }

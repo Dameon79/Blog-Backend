@@ -8,11 +8,12 @@
     margin-top: 10px;
     border-radius: 5px;
     font-size: 0.95rem;
-    background: radial-gradient(#8051be, #693aa7, #30016d);
+    background: var(--button-gradient);
     padding: 0;
     width: 70px;
     float: right;
     text-align: center;
+    font-weight: 700;
 
     &:hover {
       box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
@@ -36,7 +37,6 @@
 
     &::placeholder {
       color: var(--comment-form-text-color);
-      text-shadow: var(--comment-form-text-shadow);
     }
   }
 
@@ -46,7 +46,7 @@
     justify-content: flex-end;
     padding-top: 2px;
     color: var(--comment-form-text-color);
-    text-shadow: var(--comment-form-text-shadow);
+    font-weight: 600;
     font-size: 0.8rem;
     align-items: center;
   }
