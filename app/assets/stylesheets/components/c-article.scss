@@ -2,21 +2,12 @@
 
   &__header {
     height: 50px;
-<<<<<<< HEAD
     width: 100%;
     background-image: var(--linear-gradient);
   }
 
   &__image {
     width: 100%;
-=======
-    width: 100%;
-    background-image: linear-gradient(to right, rgba(109, 9, 139, 0.37), rgb(169, 150, 201));
-  }
-
-  &__image {
-    height: 200px;
->>>>>>> d78f69d569fca3d510215066b98408bb027292ec
     margin: 0 auto;
     padding-right: 10px;
     padding-bottom: 5px;
@@ -52,11 +43,7 @@
   .c-article {
     
     &__image {
-<<<<<<< HEAD
       width: 50%;
-=======
-      height: 400px;
->>>>>>> d78f69d569fca3d510215066b98408bb027292ec
       float: left;
     }
 
