@@ -1,0 +1,45 @@
+.c-burgernav {
+  display: none;
+
+  a {
+    font-size: 1.1rem;
+  }
+}
+
+.change .c-burgernav {
+  height: 60%;
+  width: 70%;
+  display: flex;
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: $media-medium) {
+
+  .c-burgernav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    right: 1%;
+    top: 10px;
+    width: max-content;
+  }
+
+  .c-burgernav a {
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    margin-right: 5px;
+  }
+}
+
+@media only screen and (min-width: $media-large) {
+  .c-burgernav a {
+    margin-right: 20px;
+  }
+}

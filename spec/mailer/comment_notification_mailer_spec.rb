@@ -14,5 +14,6 @@ RSpec.describe CommentNotificationMailer, type: :mailer do
 
   it "renders the body" do
     expect(mail.body.encoded).to match("Article , Peter Griffin has new comments")
+    
   end
 end

@@ -2,7 +2,7 @@
   bottom: 0;
   grid-gap: 10px 10px;
   text-align: center;
-  background-image: linear-gradient(to right, rgba(109, 9, 139, 0.37), rgb(169, 150, 201));
+  background-image: var(--linear-gradient);
   
   &__nav {
     margin: 0 auto;
@@ -35,7 +35,7 @@
   }
 }
   
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $media-medium) {
   .c-footer {
 
     &__nav {
@@ -55,7 +55,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: $media-large) {
   .c-footer {
 
     &__nav {
