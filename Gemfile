@@ -48,6 +48,7 @@ gem 'omniauth', '~> 1.6.1'
 gem 'omniauth-auth0', '~> 2.0.0'
 gem 'dalli', '~> 2.7', '>= 2.7.8'
 gem 'aws-sdk-s3', '~> 1.21', require: false
+gem 'graphql', '~> 1.8', '>= 1.8.11'
 
 
 group :development, :test do
@@ -79,3 +80,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'graphiql-rails', group: :development
