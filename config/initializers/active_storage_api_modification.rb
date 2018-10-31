@@ -1,1 +1,1 @@
-ActiveStorage::DirectUploadsController.instance_eval { skip_forgery_protection }
+ActiveStorage::DirectUploadsController.instance_eval { skip_before_action :verify_authenticity_token }

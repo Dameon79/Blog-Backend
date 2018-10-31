@@ -128,6 +128,10 @@ GEM
       multi_json (>= 1.11.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    graphiql-rails (1.4.11)
+      railties
+      sprockets-rails
+    graphql (1.8.11)
     hashdiff (0.3.7)
     hashie (3.5.7)
     i18n (1.1.1)
@@ -316,6 +320,8 @@ DEPENDENCIES
   foreman (~> 0.85.0)
   friendly_id (~> 5.2, >= 5.2.4)
   gibbon (~> 3.2)
+  graphiql-rails
+  graphql (~> 1.8, >= 1.8.11)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   omniauth (~> 1.6.1)
