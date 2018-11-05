@@ -1,7 +1,8 @@
 class ArticlesController < ApplicationController
+  include Pagy::Backend
 
   def index
-    @article = Article.all
+    @pagy, @articles = pagy(Article.all.most_recent)
   end
  
   def show
@@ -9,7 +10,4 @@ class ArticlesController < ApplicationController
     @comment = Comment.new
     @user = session[:userinfo]
   end
-
-  private
-
 end

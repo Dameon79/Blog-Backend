@@ -44,12 +44,13 @@ gem 'gibbon', '~> 3.2'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 gem 'sidekiq', '~> 5.2', '>= 5.2.2'
 gem 'redcarpet', '~> 3.4'
+gem 'rouge', '~> 3.3'
 gem 'omniauth', '~> 1.6.1'
 gem 'omniauth-auth0', '~> 2.0.0'
 gem 'dalli', '~> 2.7', '>= 2.7.8'
 gem 'aws-sdk-s3', '~> 1.21', require: false
 gem 'graphql', '~> 1.8', '>= 1.8.11'
-
+gem 'pagy', '~> 0.21.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

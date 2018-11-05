@@ -6,8 +6,8 @@ class Article < ApplicationRecord
   has_many :comments
   has_one_attached :image
   after_create :send_campaign
-
   
+  scope :most_recent, -> { order(created_at: :desc) }
   private
 
   def send_campaign

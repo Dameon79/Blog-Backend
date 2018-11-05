@@ -1,10 +1,10 @@
 <footer class="c-footer">
   <nav class="c-footer__nav">
-    <%=link_to "Home", root_url, class: "c-footer__navitem" %>  
-    <%=link_to "About Me", pages_about_url, class: "c-footer__navitem" %>
-    <a href="#" class="c-footer__navitem">My Projects</a>
-    <a href="#" class="c-footer__navitem">Blog Articles</a>
-    <%=link_to "Contact", pages_contact_url, class: "c-footer__navitem u-white-border" %>
+    <%=link_to "Home", root_path, class: "c-footer__navitem" %>  
+    <%=link_to "About Me", pages_about_path, class: "c-footer__navitem" %>
+    <%=link_to "My Projects", pages_projects_path, class: "c-footer__navitem" %>
+    <%=link_to "Blog Articles", articles_path, class: "c-footer__navitem" %>
+    <%=link_to "Contact", pages_contact_path, class: "c-footer__navitem u-white-border" %>
   </nav>
 
   <nav class="c-footer__socialmedia">
@@ -21,5 +21,6 @@
       <%= image_tag "Twitter1.png", class:"c-socialmedialogos" %>
     </a>
   </nav>
-  <h6 class="c-footer__copyright">© Dameon Sumpton 2018</h6>
+  <h6 class="c-footer__copyright">&copy; Dameon Sumpton <%= Time.current.year %></h6>
 </footer>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>

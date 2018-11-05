@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe ContactFormMailer, type: :mailer do
   describe "sends a contact form email" do
-    let(:message) { build(:message) }
+    let!(:message) { build(:message, body: "Test article") }
     let(:mail) { ContactFormMailer.with(message: message).contact_notification }
   
 
@@ -13,7 +13,7 @@ RSpec.describe ContactFormMailer, type: :mailer do
     end
 
     it "renders the body" do
-      expect(mail.body.encoded).to have_content(message.body)
+      expect(mail.body.encoded).to match("Test article")
     end
   end
 end

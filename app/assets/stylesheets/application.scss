@@ -2,6 +2,7 @@
 
 @import "fonts";
 @import "base";
+@import "highlight";
 
 @import "components/c-header";
 @import "components/c-personal-logo";
@@ -22,5 +23,6 @@
 @import "forms/f-contact-form";
 
 @import "utilities/u-white-border";
+@import "utilities/u-pagy";
 
 @import "animations/a-ds-welcome-animation";

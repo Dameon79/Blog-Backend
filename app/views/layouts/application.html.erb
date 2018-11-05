@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DSBlog</title>
+    <title><%= page_name ||= nil %> | DSBlog</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -10,10 +10,11 @@
   </head>
 
   <body>
-    <%= render 'articles/nav' %>
-    <p class="flash"><%= flash.notice %></p>
-    
+    <%= render 'shared/nav' %>
+    <% if flash.notice %>
+      <p class="flash"><%= flash.notice %></p>
+    <% end %>
     <%= yield %>
-    <%= render 'articles/footer' %>
+    <%= render 'shared/footer' %>
   </body>
 </html>
