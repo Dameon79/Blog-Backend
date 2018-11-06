@@ -1,11 +1,5 @@
 .c-about-me-page {
   
-  &__header {
-    height: 50px;
-    width: 100%;
-    background-image: var(--linear-gradient);
-  }
-
   &__content {
     width: 95%;
     border-top: 1px solid grey;
@@ -96,10 +90,6 @@
 
 @media only screen and (min-width: $media-medium) {
   .c-about-me-page {
-
-    &__header {
-      height: 75px;
-    }
 
     &__photo {
       width: 150px;

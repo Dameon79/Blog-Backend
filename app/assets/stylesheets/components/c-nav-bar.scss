@@ -1,0 +1,11 @@
+.c-nav-bar {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(72, 65, 95);
+}
+
+@media only screen and (min-width: $media-medium) {
+  .c-nav-bar{
+    height: 75px;
+  }
+}

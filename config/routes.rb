@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get 'auth/oauth2/callback' => 'auth0#callback'
   get 'auth/failure' => 'auth0#failure'
+  get 'auth/logout' => 'auth0#logout'
 
   get 'pages/contact', to: 'static_pages#contact'
   get 'pages/about', to: 'static_pages#about'
