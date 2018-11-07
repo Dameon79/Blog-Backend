@@ -6,6 +6,18 @@
     <%= markdown(@article.text) %>
   </p>
   <br>
+  <div class="c-comments-container">
+    <% @article.comments.each do |comment| %>
+      <div class="c-comments-container__comment">
+        <h3 class="c-comments-container__comment-name"><%= comment.name %></h3>
+        <h3 class="c-comments-container__comment-body"><%= markdown(comment.body) %></h3>
+        <%= button_to "Delete Comment", admin_comment_path(comment), class: "btn btn-outline-danger",
+                method: :delete,
+                data: { confirm: "Please confirm you want to delete this comment" } %>
+      </div>
+    <% end %>
+  </div>
+
   <%= link_to "Back to Articles", admin_articles_path, class: "btn btn-secondary" %>
   <%= link_to "Edit Article", edit_admin_article_path, class: "btn btn-outline-warning" %>
   <%= button_to "Delete Article", admin_article_path, class: "btn btn-outline-danger",

@@ -2,7 +2,7 @@ class Admin::ArticlesController < Admin::ApplicationController
   before_action :find_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = Article.all
+    @articles = Article.includes(:comments).all.most_recent
   end
   
   def show
@@ -18,11 +18,11 @@ class Admin::ArticlesController < Admin::ApplicationController
   def create
     @article = Article.new(article_params)
     @article.image.attach(article_params[:image])
-     if @article.save
+    if @article.save
       redirect_to admin_articles_path
       flash.notice = "Article succesfully created"
     else
-     render 'new'
+      render 'new'
     end
   end
 
@@ -50,4 +50,3 @@ class Admin::ArticlesController < Admin::ApplicationController
       @article = Article.friendly.find(params[:id])
     end
 end
-
