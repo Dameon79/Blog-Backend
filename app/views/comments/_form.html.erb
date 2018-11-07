@@ -25,4 +25,5 @@
     <%= form.hidden_field :avatar, value: user["info"]["image"] %>
   </div>
   <p class="f-comments-form__submit"><%= form.submit "Post", class:"f-comments-form__submit" %></p>
+  <%= link_to "Logout", auth_logout_path, class: "f-comments-form__logout" %>
 <% end %>

@@ -1,23 +1,36 @@
 module Types
   class QueryType < Types::BaseObject
+    include Pagy::Backend
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    field :article, ArticleType , null: true do
+    field :article, ArticleType, null: true do
       description "Find an article by id"
       argument :id, ID, required: true
     end
 
-    field :articles, [ArticleType], null: true do
-      description "Returns an array of all articles"
+    field :articles, Types::ArticleType.connection_type, null: false do
+      argument :page, Int, required: false
     end
 
     def article(id:)
       Article.find(id)
+    end 
+
+    def articles(page: nil)
+      if page
+        params[:page] = page
+        @pagy, @records = pagy(Article.most_recent)
+        @records
+      else 
+        Article.most_recent
+      end
     end
 
-    def articles
-      Article.all
+    private
+
+    def params
+      @params ||= {}
     end
   end
 end

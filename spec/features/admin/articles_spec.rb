@@ -8,10 +8,6 @@ RSpec.describe "Articles", type: :feature do
   end
 
   describe "Viewing all articles" do
-    before do
-      allow(SendEmailCampaign).to receive(:call)
-    end
-
     let!(:article) { create(:article) }
 
     it "shows all articles" do
@@ -22,10 +18,6 @@ RSpec.describe "Articles", type: :feature do
   end
 
   describe "creating a new article" do
-    before do
-      allow(SendEmailCampaign).to receive(:call)
-    end
-
     it "creates a new blog post" do
       visit new_admin_article_path
 
@@ -38,10 +30,6 @@ RSpec.describe "Articles", type: :feature do
   end
 
   describe "ensure article has title and content" do
-    before do
-      allow(SendEmailCampaign).to receive(:call)
-    end
-
     it "checks blog title and article is complete" do
       visit new_admin_article_path
       click_button "Create Article"
@@ -52,10 +40,6 @@ RSpec.describe "Articles", type: :feature do
   end
 
   describe "editing an existing article" do
-    before do
-      allow(SendEmailCampaign).to receive(:call)
-    end
-
     let!(:article) { create(:article) }
 
     it "edits a current blog post" do
@@ -70,10 +54,6 @@ RSpec.describe "Articles", type: :feature do
   end
 
   describe "deleting an existing article", js: true do
-    before do
-      allow(SendEmailCampaign).to receive(:call)
-    end
-
     let!(:article) { create(:article) }
 
     it "should remove the article" do

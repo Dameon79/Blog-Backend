@@ -1,0 +1,14 @@
+.pagy-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+  .page {
+    padding: 5px;
+  }
+
+  a {
+    color:rgb(60, 35, 129);
+  }
+}

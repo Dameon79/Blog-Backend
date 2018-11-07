@@ -2,11 +2,13 @@
 
 @import "fonts";
 @import "base";
+@import "highlight";
 
 @import "components/c-header";
 @import "components/c-personal-logo";
 @import "components/c-burger-container";
 @import "components/c-burgernav";
+@import "components/c-nav-bar";
 @import "components/c-mc-signup";
 @import "components/c-my-codepens";
 @import "components/c-article";
@@ -22,5 +24,6 @@
 @import "forms/f-contact-form";
 
 @import "utilities/u-white-border";
+@import "utilities/u-pagy";
 
 @import "animations/a-ds-welcome-animation";

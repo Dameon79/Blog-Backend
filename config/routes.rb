@@ -3,13 +3,15 @@ Rails.application.routes.draw do
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
   post "/graphql", to: "graphql#execute"
-  root 'articles#index'
+  root 'static_pages#home'
 
   get 'auth/oauth2/callback' => 'auth0#callback'
   get 'auth/failure' => 'auth0#failure'
+  get 'auth/logout' => 'auth0#logout'
 
   get 'pages/contact', to: 'static_pages#contact'
   get 'pages/about', to: 'static_pages#about'
+  get 'pages/projects', to: 'static_pages#projects'
 
   namespace :admin do
     root 'articles#index'

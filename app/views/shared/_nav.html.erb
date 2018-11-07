@@ -1,0 +1,14 @@
+<div class="c-burger-container" onclick="animateBurger(this)">
+  <div class="c-burger-container__burger1"></div>
+  <div class="c-burger-container__burger2"></div>
+  <div class="c-burger-container__burger3"></div>
+
+
+  <nav class="c-burgernav">
+    <%= link_to "Home", root_path, class: "c-burgernav__menu" %>
+    <%= link_to "About Me", pages_about_path, class: "c-burgernav__menu" %>
+    <%= link_to "My Projects", pages_projects_path, class: "c-burgernav__menu" %>
+    <%= link_to "Blog Articles", articles_path, class: "c-burgernav__menu" %>
+    <%= link_to "Contact", pages_contact_path, class: "c-burgernav__menu u-white-border" %>
+  </nav>
+</div>

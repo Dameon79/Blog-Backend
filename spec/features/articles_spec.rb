@@ -2,10 +2,6 @@ require 'rails_helper'
 
 RSpec.describe "Articles", type: :feature do
   describe "Reading an article as a user" do
-    before do
-      allow(SendEmailCampaign).to receive(:call)
-    end
-
     let(:article) { create(:article) }
 
     it "shows the article" do
@@ -17,7 +13,7 @@ RSpec.describe "Articles", type: :feature do
 
   describe "Displays the Homepage to a user" do
     it "allows a user to view the Homepage" do
-      visit root_url
+      visit root_path
 
       expect(page).to have_xpath '//form'
     end

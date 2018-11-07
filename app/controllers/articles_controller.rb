@@ -1,7 +1,10 @@
 class ArticlesController < ApplicationController
+  include Pagy::Backend
 
+  after_action :set_return_url, only: :show
+  
   def index
-    @article = Article.all
+    @pagy, @articles = pagy(Article.all.most_recent)
   end
  
   def show
@@ -11,5 +14,8 @@ class ArticlesController < ApplicationController
   end
 
   private
-
+  
+  def set_return_url
+    session[:return_url] = article_url(@article)
+  end
 end

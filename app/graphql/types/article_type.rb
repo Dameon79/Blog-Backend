@@ -6,5 +6,6 @@ module Types
     field :text, String, null: false
     field :comments, [CommentType], null: true
     field :image, String, null: false
+   
   end
 end

@@ -1,0 +1,21 @@
+<%= render 'shared/header' %> 
+
+<h2>My Codepens</h2>
+<div class="c-my-codepens">
+  <div class="c-my-codepens__grid">
+    <p data-height="400" data-theme-id="dark" data-slug-hash="KQyVQe" data-default-tab="css,result" data-user="dameon79" data-pen-title="Android Logo" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/dameon79/pen/KQyVQe/">Android Logo</a> by Dameon Sumpton (<a href="https://codepen.io/dameon79">@dameon79</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <p data-height="400" data-theme-id="dark" data-slug-hash="QZYgmE" data-default-tab="result" data-user="dameon79" data-pen-title="Etch a Sketch" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/dameon79/pen/QZYgmE/">Etch a Sketch</a> by Dameon Sumpton (<a href="https://codepen.io/dameon79">@dameon79</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+  </div>
+</div>
+
+<h2>Blog Articles</h2>
+<div class="c-articles-container"> 
+  <% @articles.each_with_index do |article, index| %> 
+    <article class="c-articles-container__article"> 
+      <h3 class="c-articles-container__article-title"><%= article.title %></h3>
+      <img class="c-articles-container__article-image" src="<%= rails_blob_path(article.image) %>">
+      <%= link_to "", article_path(article), class: "c-articles-container__article-link" %>
+    </article>
+  <% end %>
+</div>
+<%= link_to 'All Articles', articles_path %>
