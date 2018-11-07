@@ -50,8 +50,12 @@ gem 'omniauth-auth0', '~> 2.0.0'
 gem 'dalli', '~> 2.7', '>= 2.7.8'
 gem 'aws-sdk-s3', '~> 1.21', require: false
 gem 'graphql', '~> 1.8', '>= 1.8.11'
+<<<<<<< HEAD
 gem 'pagy', '~> 0.21.0'
 gem 'wisper', '~> 2.0'
+=======
+
+>>>>>>> e8364b55aa24bf792fd5f3b19ed3e1b3fc40b31f
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -3,7 +3,11 @@ Rails.application.routes.draw do
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
   post "/graphql", to: "graphql#execute"
+<<<<<<< HEAD
   root 'static_pages#home'
+=======
+  root 'articles#index'
+>>>>>>> e8364b55aa24bf792fd5f3b19ed3e1b3fc40b31f
 
   get 'auth/oauth2/callback' => 'auth0#callback'
   get 'auth/failure' => 'auth0#failure'

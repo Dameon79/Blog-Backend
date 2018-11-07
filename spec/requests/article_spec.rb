@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe DSBlogSchema do
+<<<<<<< HEAD
   describe "shows the article data" do
     context "when there's an article" do
       let(:result) {
@@ -12,6 +13,20 @@ RSpec.describe DSBlogSchema do
         res
       }
 
+=======
+  # Call `result` to execute the query
+  let(:result) {
+    res = DSBlogSchema.execute(
+      query_string
+    )
+    # Print any errors
+    pp res if res["errors"]
+    res
+  }
+
+  describe "shows the article data" do
+    context "when there's an article" do
+>>>>>>> e8364b55aa24bf792fd5f3b19ed3e1b3fc40b31f
       let!(:article) { create(:article, :with_comments) }
    
       let(:query_string) { 
@@ -39,6 +54,7 @@ RSpec.describe DSBlogSchema do
   end
 
   describe "all articles" do
+<<<<<<< HEAD
     context "returns all articles on a page" do
       let(:result) {
         res = DSBlogSchema.execute(
@@ -50,21 +66,31 @@ RSpec.describe DSBlogSchema do
       }
 
       let!(:articles) { create_list(:article, 60) }
+=======
+    context "returns all articles" do
+      let!(:articles) { create_list(:article, 5) }
+>>>>>>> e8364b55aa24bf792fd5f3b19ed3e1b3fc40b31f
 
       let(:query_string) {
         %|
           { 
             articles {
+<<<<<<< HEAD
               edges {
                 node {
                   title
                 }
               }
+=======
+              id
+              title
+>>>>>>> e8364b55aa24bf792fd5f3b19ed3e1b3fc40b31f
             }
           }
         |
       }
       it "returns the article array" do
+<<<<<<< HEAD
         articles_data = result["data"]["articles"]["edges"]
         expect(articles_data.count).to eq 60
         expect(articles_data.map { |a| a["node"]["title"] }).to match Article.most_recent.pluck(:title)
@@ -102,6 +128,12 @@ RSpec.describe DSBlogSchema do
       it "returns the selected number of articles" do
         articles_data = result["data"]["articles"]['edges']
         expect(articles_data.map { |a| a["node"]["title"] }).to match Article.most_recent[(page * Pagy::VARS[:items]) - Pagy::VARS[:items], Pagy::VARS[:items]].pluck(:title)
+=======
+        articles_data = result["data"]["articles"]
+       
+        expect(articles_data.count).to eq 5
+        expect(articles_data.map { |a| a["title"] }).to match articles.pluck(:title)
+>>>>>>> e8364b55aa24bf792fd5f3b19ed3e1b3fc40b31f
       end
     end
   end
