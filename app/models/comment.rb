@@ -1,4 +1,6 @@
 class Comment < ApplicationRecord
+  include Wisper::Publisher
+
   validates :name, :body, presence: true
   belongs_to :article
 
@@ -7,7 +9,6 @@ class Comment < ApplicationRecord
   private
 
   def send_notification
-    SendCommentNotificationJob.perform_async(self.article.id)
+    broadcast(:send_comment_notification, self.article.id)
   end
-
 end

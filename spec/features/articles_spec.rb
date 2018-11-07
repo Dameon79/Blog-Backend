@@ -2,10 +2,6 @@ require 'rails_helper'
 
 RSpec.describe "Articles", type: :feature do
   describe "Reading an article as a user" do
-    before do
-      allow(SendEmailCampaign).to receive(:call)
-    end
-
     let(:article) { create(:article) }
 
     it "shows the article" do

@@ -1,5 +1,7 @@
 class Article < ApplicationRecord
   extend FriendlyId
+  include Wisper::Publisher
+
   friendly_id :title, use: :slugged
   
   validates :title, :text, :image, presence: true
@@ -8,10 +10,9 @@ class Article < ApplicationRecord
   after_create :send_campaign
   
   scope :most_recent, -> { order(created_at: :desc) }
-  private
 
   def send_campaign
-    SendEmailCampaignJob.perform_async
+    broadcast(:send_email_campaign)
   end
 end
 
