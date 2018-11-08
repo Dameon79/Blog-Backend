@@ -1,8 +1,32 @@
 .c-my-codepens {
   padding: 10px;
 
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0px 50px;
+  }
+
   &__heading {
     margin-top: 15px;
+  }
+
+  &__all-pens {
+    display: flex;
+    background: var(--button-gradient);
+    padding: 10px;
+    border-radius: 5px;
+    justify-content: center;
+    width: 150px;
+    margin: 0 auto;
+
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+      text-shadow: 2px 2px 2px black;
+      color: white;
+      font-weight: 600;
+    }
   }
 }
 
@@ -11,10 +35,8 @@
     margin-right: 15px;
 
     &__grid {
-      display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto;
-      grid-gap: 0px 50px;
     }
   }
 
@@ -22,7 +44,7 @@
     margin-left: 8px;
     padding-top: 25px;
     padding-bottom: 25px;
-  }
+  }  
 }
 
 @media only screen and (min-width: $media-large) {
@@ -35,7 +57,6 @@
     iframe {
       margin-left: 8px;
       height: 450px;
-      
     }
   }
 }

@@ -1,0 +1,29 @@
+.c-comments-container {
+  display: grid;
+  grid-gap: 10px;
+  border-top: 1px solid grey;
+  padding-top: 10px;
+  width: 100%;
+  
+  &__comment {
+    display: grid;
+    grid-template-columns: 50px 1fr 90px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.226);
+    border-top: 1px solid rgba(128, 128, 128, 0.226);
+    padding-bottom: 5px;
+    padding-top: 5px;
+    grid-column-gap: 5px;
+    font-size: 0.8rem;
+  }
+
+  &__comment-body {
+    padding-left: 15px;
+    font-size: 0.8rem;
+  }
+
+  &__comment-name {
+    color: rgb(60, 35, 129);
+    text-shadow: 1px 1px 1px rgba(78, 32, 116, 0.5);
+    font-size: 0.8rem; 
+  }
+}

@@ -5,7 +5,7 @@ class Article < ApplicationRecord
   friendly_id :title, use: :slugged
   
   validates :title, :text, :image, presence: true
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_one_attached :image
   after_create :send_campaign
   

@@ -16,10 +16,11 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'articles#index'
     resources :articles
+    resources :comments, only: [:destroy]
   end
 
-  resources :articles do 
-    resources :comments
+  resources :articles, except: [:destroy] do 
+    resources :comments, only: [:show, :create]
   end
 
   resources :messages, only: [:create, :new]
