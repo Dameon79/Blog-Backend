@@ -38,6 +38,22 @@
     background: var(--linear-gradient);
     height: 50px;
   }
+
+  &__all-articles {
+    background: var(--button-gradient);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 150px;
+    justify-self: center;
+    
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+      text-shadow: 2px 2px 2px black;
+      color: white;
+      font-weight: 600;
+    }
+  }
 }
 
 @media only screen and (min-width: $media-medium) {
@@ -47,6 +63,11 @@
     grid-gap: 20px 20px;
     margin: 20px;
     margin-top: 50px;
+
+    &__all-articles {
+      grid-column: span  2;
+      justify-self: center;
+    }
   }
 }
 
@@ -66,6 +87,11 @@
     &__article-title {
       height: 50px;
       max-width: 100%;
+    }
+
+    &__all-articles {
+      grid-column-start: 2;
+      justify-self: center;
     }
   }
 }
