@@ -25,6 +25,7 @@ body {
   line-height: 1.5;
 }
 
+
 h2 {
   display: flex;
   align-items: center;
@@ -48,5 +49,7 @@ textarea {
 }
 
 .highlight {
-  padding: 5px;
+  padding: 10px;
+  overflow: auto;
+  font-family: 'Courier';
 }
