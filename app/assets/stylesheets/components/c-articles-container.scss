@@ -40,12 +40,14 @@
   }
 
   &__all-articles {
+    display: flex;
     background: var(--button-gradient);
     padding: 10px;
     border-radius: 5px;
-    text-align: center;
+    justify-content: center;
     width: 150px;
-    justify-self: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
     
     &:hover {
       box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
