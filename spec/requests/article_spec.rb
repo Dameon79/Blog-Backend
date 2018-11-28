@@ -55,19 +55,15 @@ RSpec.describe DSBlogSchema do
         %|
           { 
             articles {
-              edges {
-                node {
-                  title
-                }
-              }
+                title
             }
           }
         |
       }
       it "returns the article array" do
-        articles_data = result["data"]["articles"]["edges"]
+        articles_data = result["data"]["articles"]
         expect(articles_data.count).to eq 60
-        expect(articles_data.map { |a| a["node"]["title"] }).to match Article.most_recent.pluck(:title)
+        expect(articles_data.map { |a| a["title"] }).to match Article.most_recent.pluck(:title)
       end
     end
   end
@@ -90,18 +86,14 @@ RSpec.describe DSBlogSchema do
         %|
           {
             articles(page: #{page}) {
-              edges {
-                node {
-                  title
-                }
-              }
+              title
             }
           }
         |
       }
       it "returns the selected number of articles" do
-        articles_data = result["data"]["articles"]['edges']
-        expect(articles_data.map { |a| a["node"]["title"] }).to match Article.most_recent[(page * Pagy::VARS[:items]) - Pagy::VARS[:items], Pagy::VARS[:items]].pluck(:title)
+        articles_data = result["data"]["articles"]
+        expect(articles_data.map { |a| a["title"] }).to match Article.most_recent[(page * Pagy::VARS[:items]) - Pagy::VARS[:items], Pagy::VARS[:items]].pluck(:title)
       end
     end
   end

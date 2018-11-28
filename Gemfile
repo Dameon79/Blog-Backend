@@ -52,6 +52,9 @@ gem 'aws-sdk-s3', '~> 1.21', require: false
 gem 'graphql', '~> 1.8', '>= 1.8.11'
 gem 'pagy', '~> 0.21.0'
 gem 'wisper', '~> 2.0'
+gem 'rack-cors', '~> 1.0', '>= 1.0.2'
+gem 'image_processing', '~> 1.2'
+gem 'mini_magick', '~> 4.9', '>= 4.9.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

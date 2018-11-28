@@ -9,7 +9,7 @@ module Types
       argument :id, ID, required: true
     end
 
-    field :articles, Types::ArticleType.connection_type, null: false do
+    field :articles, [ArticleType], null: false do
       argument :page, Int, required: false
     end
 
