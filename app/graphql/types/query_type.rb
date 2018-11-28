@@ -6,15 +6,15 @@ module Types
 
     field :article, ArticleType, null: true do
       description "Find an article by id"
-      argument :id, ID, required: true
+      argument :slug, String, required: true
     end
 
     field :articles, [ArticleType], null: false do
       argument :page, Int, required: false
     end
 
-    def article(id:)
-      Article.find(id)
+    def article(slug:)
+      Article.friendly.find(slug)
     end 
 
     def articles(page: nil)
