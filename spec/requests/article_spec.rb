@@ -8,7 +8,7 @@ RSpec.describe DSBlogSchema do
           query_string
         )
         # Print any errors
-        pp res if res["errors"]
+        pp res if res["errors"] 
         res
       }
 
@@ -17,7 +17,7 @@ RSpec.describe DSBlogSchema do
       let(:query_string) { 
         %|
           { 
-            article(slug: #{article.slug}) { 
+            article(slug: "#{article.slug}") { 
               title 
               text
               slug
@@ -28,6 +28,8 @@ RSpec.describe DSBlogSchema do
           }
         | 
       }
+
+      
       it "returns the article data" do
         article_data = result["data"]["article"]
         comment = result["data"]["article"]["comments"]
