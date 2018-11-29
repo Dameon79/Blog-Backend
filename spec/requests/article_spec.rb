@@ -17,9 +17,10 @@ RSpec.describe DSBlogSchema do
       let(:query_string) { 
         %|
           { 
-            article(id: #{article.id}) { 
+            article(slug: #{article.slug}) { 
               title 
               text
+              slug
               comments {
                 body 
               }
