@@ -14,7 +14,7 @@ module Types
     end
 
     def article(slug:)
-      Article.friendly.find(slug)
+      Article.friendly.find(slug) 
     end 
 
     def articles(page: nil)
