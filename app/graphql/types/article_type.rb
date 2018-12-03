@@ -8,6 +8,7 @@ module Types
     field :article_image, String, null: false
     field :created_at, String, null: false
     field :article_thumbnail, String, null: false
+    field :slug, String, null: false
 
     def article_image
       Rails.application.routes.url_helpers.rails_blob_path(object.image, only_path: true)
