@@ -6,8 +6,7 @@ class GraphqlController < ApplicationController
     query = params[:query]
     operation_name = params[:operationName]
     context = {
-      # Query context goes here, for example:
-      # current_user: current_user,
+      authorised: authorised?
     }
     result = DSBlogSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
@@ -18,7 +17,7 @@ class GraphqlController < ApplicationController
 
   private
 
-  # Handle form data, JSON body, or a blank value
+  # Handle form data, JSON body, or a blank value=-
   def ensure_hash(ambiguous_param)
     case ambiguous_param
     when String
@@ -26,7 +25,7 @@ class GraphqlController < ApplicationController
         ensure_hash(JSON.parse(ambiguous_param))
       else
         {}
-      end
+      end                                           
     when Hash, ActionController::Parameters
       ambiguous_param
     when nil
@@ -34,6 +33,14 @@ class GraphqlController < ApplicationController
     else
       raise ArgumentError, "Unexpected parameter: #{ambiguous_param}"
     end
+  end
+
+  def authorised?
+    token = request.authorization[7, request.authorization.length]
+    decoded_token = JWT.decode(token, OpenSSL::PKey::RSA.new(ENV.fetch('AUTH0_CERTIFICATE')).public_key, true, { algorithm: 'RS256' })
+    decoded_token.first.fetch("exp") >= Time.now.to_i
+  rescue
+    false
   end
 
   def handle_error_in_development(e)

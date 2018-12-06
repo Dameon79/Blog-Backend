@@ -1,7 +1,7 @@
 module Types
   class MutationType < Types::BaseObject 
 
-    field :add_comment, CommentType, null: true do
+    field :addComment, CommentType, null: true do
       description "Adds a comment to an article"
       argument :slug, String, required: true
       argument :name, String, required: true
@@ -9,13 +9,13 @@ module Types
       argument :avatar, String, required: true
     end
 
-
     def add_comment(slug:, name:, body:, avatar:)
-      article = Article.friendly.find(slug)
-      article.comments.create(name: name, body: body, avatar: avatar)
-
-    end 
+      if context.fetch(:authorised)
+        article = Article.friendly.find(slug)
+        article.comments.create(name: name, body: body, avatar: avatar)
+      else
+        GraphQL::ExecutionError.new("Please Login")
+      end
+    end
   end
 end
-
- 
