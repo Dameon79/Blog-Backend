@@ -55,6 +55,7 @@ gem 'wisper', '~> 2.0'
 gem 'rack-cors', '~> 1.0', '>= 1.0.2'
 gem 'image_processing', '~> 1.2'
 gem 'mini_magick', '~> 4.9', '>= 4.9.2'
+gem 'rack-throttle', '~> 0.7.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
