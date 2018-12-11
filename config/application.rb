@@ -18,11 +18,7 @@ module DSBlog
     # -- all .rb files in that directory are automatically loaded
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-<<<<<<< HEAD
-        origins 'localhost:3000', '/\Ahttp:\/\/www.dameon-sumpton.com\z/'
-=======
         origins 'localhost:3000', 'www.dameon-sumpton.com', 'https://dameon-blog-react.herokuapp.com'
->>>>>>> 0e95042893f27a4b77348f36665d3b465e2c3de2
         resource '*', headers: :any, methods: [:get, :post, :options]
         
       end
