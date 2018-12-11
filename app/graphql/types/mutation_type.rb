@@ -9,7 +9,7 @@ module Types
       argument :avatar, String, required: true
     end
 
-    def add_comment(slug:, name:, body:, avatar:)
+    def addComment(slug:, name:, body:, avatar:)
       if context.fetch(:authorised)
         article = Article.friendly.find(slug)
         article.comments.create(name: name, body: body, avatar: avatar)
@@ -17,7 +17,5 @@ module Types
         GraphQL::ExecutionError.new("Please Login")
       end
     end
-  end
+  end    
 end
-
- 
