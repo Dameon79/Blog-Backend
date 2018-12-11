@@ -9,7 +9,7 @@ module Types
       argument :avatar, String, required: true
     end
 
-    def addComment(slug:, name:, body:, avatar:)
+    def add_comment(slug:, name:, body:, avatar:)
       if context.fetch(:authorised)
         article = Article.friendly.find(slug)
         article.comments.create(name: name, body: body, avatar: avatar)
